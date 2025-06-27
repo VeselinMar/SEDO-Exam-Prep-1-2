@@ -36,7 +36,6 @@ pipeline {
             steps {
                 sh 'dotnet build --configuration Release --no-restore'
             }
-        }
 
         stage('Test') {
             when {
