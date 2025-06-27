@@ -1,9 +1,10 @@
-name: Build and Test Develop branch
+name: Build and Test Develop/Feature branches
 
 on:
   push:
     branches:
-      - develop
+      - develop/*
+      - feature/*
 
 jobs:
   build:
