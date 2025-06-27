@@ -22,6 +22,7 @@ namespace SoftUniBazar.Tests
         [SetUp]
         public void Setup()
         {
+            // write something to test workflow
             // Set up in-memory database for testing
             var options = new DbContextOptionsBuilder<BazarDbContext>()
                 .UseInMemoryDatabase(databaseName: "BazarDbTest")
