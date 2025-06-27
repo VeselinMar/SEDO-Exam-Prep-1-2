@@ -6,7 +6,7 @@ pipeline {
             when {
                 anyOf {
                     branch 'main'
-                    branch 'feature' }
+                    branch 'feature'
                 }
             }
             steps {
@@ -18,7 +18,7 @@ pipeline {
             when {
                 anyOf {
                     branch 'main'
-                    branch 'feature' }
+                    branch 'feature'
                 }
             }
             steps {
@@ -30,24 +30,26 @@ pipeline {
             when {
                 anyOf {
                     branch 'main'
-                    branch 'feature' }
+                    branch 'feature'
                 }
             }
             steps {
                 sh 'dotnet build --configuration Release --no-restore'
             }
+        }
 
         stage('Test') {
             when {
                 anyOf {
                     branch 'main'
-                    branch 'feature' }
+                    branch 'feature'
                 }
             }
             steps {
                 sh 'dotnet test --configuration Release --no-build --verbosity normal'
             }
         }
+    }
 
     post {
         always {
@@ -58,3 +60,4 @@ pipeline {
         }
     }
 }
+
