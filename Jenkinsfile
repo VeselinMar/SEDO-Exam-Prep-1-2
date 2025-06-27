@@ -50,14 +50,5 @@ pipeline {
             }
         }
     }
-
-    post {
-        always {
-            echo "Pipeline finished for ${env.BRANCH_NAME}"
-        }
-        failure {
-            echo "Pipeline failed for ${env.BRANCH_NAME}"
-        }
-    }
 }
 
