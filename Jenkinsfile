@@ -6,7 +6,7 @@ pipeline {
             when {
                 anyOf {
                     branch 'main'
-                    expression { env.BRANCH_NAME.startsWith('feature/') }
+                    branch 'feature' }
                 }
             }
             steps {
@@ -18,7 +18,7 @@ pipeline {
             when {
                 anyOf {
                     branch 'main'
-                    expression { env.BRANCH_NAME.startsWith('feature/') }
+                    branch 'feature' }
                 }
             }
             steps {
@@ -30,7 +30,7 @@ pipeline {
             when {
                 anyOf {
                     branch 'main'
-                    expression { env.BRANCH_NAME.startsWith('feature/') }
+                    branch 'feature' }
                 }
             }
             steps {
@@ -42,7 +42,7 @@ pipeline {
             when {
                 anyOf {
                     branch 'main'
-                    expression { env.BRANCH_NAME.startsWith('feature/') }
+                    branch 'feature' }
                 }
             }
             steps {
